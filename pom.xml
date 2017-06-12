@@ -12,7 +12,27 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+    
+    
+    
+ 
+  
+  <project name="tomcat-demo" default="war" basedir=".">
+
+	<property name="project-name" value="${ant.project.name}" />
+	<property name="builder" value="TeamCakes" />
+
+	<property name="war-file-name" value="${project-name}.war" />
+	<property name="source-directory" value="src" />
+	<property name="classes-directory" value="bin" />
+	<property name="web-directory" value="web" />
+	<property name="web-xml-file" value="web/WEB-INF/web.xml" />
+	<tstamp prefix="build-info">
+		<format property="current-date" pattern="d-MMMM-yyyy" locale="en" />
+		<format property="current-time" pattern="hh:mm:ss a z" locale="en" />
+	</tstamp>
+	<property name="build-directory" value="build">
+    </property>
 
   <dependencies>
     <dependency>
